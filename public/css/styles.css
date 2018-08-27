@@ -15,8 +15,41 @@ p {
 
 .what {
         color: blue;
+        text-align: center;
 }
 
 #thanks {
           color: green;
+          text-align: center;
+}
+.link a:link {
+    color: red;
+}
+.link a:hover {
+    color: purple;
+}
+
+.iulogo {
+          width: 25px;
+          height: 10px;
+          border: 0;
+}
+.userinfo {
+            text-align: center;
+}
+.userinfo h2 {
+            color: orange;
+            font-style: italic;
+}
+.userinfo a:link {
+                    color: green;
+}
+
+.userinfo a:hover {
+                    color: blue;
+}
+
+#useriulogo {
+  height: 15px;
+  align-content: center;
 }
