@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/dashboard.css">
     <link href="https://fonts.googleapis.com/css?family=Inconsolata|Sawarabi+Mincho" rel="stylesheet">
 
   </head>
@@ -34,7 +35,7 @@
 <p class="lead">Tables & Form Page</p>
 </div></center>
 </div>
-    <table class="table table-striped">
+    <table id="hw2table" class="table table-striped">
       <thead>
         <tr>
           <th scope="col">Currency</th>
@@ -47,7 +48,7 @@
       <tbody>
         <tr>
           <th scope="row">$1</th>
-          <td>2</td>
+          <td>1</td>
           <td>3.005</td>
           <td>04/16/2018</td>
           <td>I like five</td>
@@ -55,30 +56,30 @@
         <tr>
           <th scope="row">$1</th>
           <td>2</td>
-          <td>3.005</td>
-          <td>04/16/2018</td>
-          <td>I like five</td>
+          <td>3.006</td>
+          <td>04/17/2018</td>
+          <td>I don't like four</td>
         </tr>
         <tr>
           <th scope="row">$1</th>
-          <td>2</td>
-          <td>3.005</td>
-          <td>04/16/2018</td>
-          <td>I like five</td>
+          <td>3</td>
+          <td>3.007</td>
+          <td>04/18/2018</td>
+          <td>Three is alright</td>
         </tr>
         <tr>
           <th scope="row">$1</th>
-          <td>2</td>
-          <td>3.005</td>
-          <td>04/16/2018</td>
-          <td>I like five</td>
+          <td>4</td>
+          <td>3.008</td>
+          <td>04/19/2018</td>
+          <td>Six? no way</td>
         </tr>
         <tr>
           <th scope="row">$1</th>
-          <td>2</td>
-          <td>3.005</td>
-          <td>04/16/2018</td>
-          <td>I like five</td>
+          <td>5</td>
+          <td>3.009</td>
+          <td>04/20/2018</td>
+          <td>Seven is cool</td>
         </tr>
       </tbody>
     </table>
@@ -105,5 +106,9 @@
   </div>
   <button type="submit" class="btn btn-primary">Add</button>
 </form>
+<script src="js/tablesort.min.js"></script>
+<script>
+new Tablesort(document.getElementById('hw2table'));
+</script>
   </body>
 </html>
