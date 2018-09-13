@@ -7,12 +7,19 @@ var fetchUser = new Vue({
       name:{first:'',
      last:'',
     },
-      dob: {age:''
-    },
+    dob: '',
     email:'',
     picture:{medium:''
     }
-  }
+  },
+    computed: {
+      personAge: function() {
+        return moment().diff(moment(this.person.dob.date),'years');
+      },
+      realDob: function() {
+        return moment(this.person.dob.date).format("MMM Do YYYY");
+      }
+    }
   },
   methods: {
     randomUser: function() {
@@ -25,12 +32,21 @@ var fetchUser = new Vue({
          fetchUser.person = json.results[0];
          console.log(this.person);
        }
+     );
+     },
+       shuffleUser: function(event) {
+         this.randomUser();
+       },
+       pretty_date: function(x) {
+         return moment(x).format('1');
+       },
+       personAge: function() {
+         return moment().diff(moment(this.person.dob.date),'years');
+       },
+       realDob: function() {
+         return moment(this.person.dob.date).format("MMM Do YYYY");
+       }
 
-       );
-    },
-      Age: function(){
-        return moment(this.birthdate).diff(moment(), 'years')
-    }
   },
   created() {
     this.randomUser()

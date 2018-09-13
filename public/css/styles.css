@@ -40,6 +40,8 @@ p {
 .userinfo h2 {
             color: orange;
             font-style: italic;
+            display: inline-block;
+            text-transform: uppercase;
 }
 .userinfo a:link {
                     color: green;
