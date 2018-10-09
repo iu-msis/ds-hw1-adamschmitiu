@@ -22,7 +22,8 @@ public function create() {
   ]);
   $this->$id = $db->lastInsertId();
 }
-    public static function fetchAll() {
+    public static function getWorkByTaskId(int $taskId)
+    //public static function fetchAll() {
       // 1. Connect to the database
       $db = new PDO(DB_SERVER, DB_USER, DB_PW);
 

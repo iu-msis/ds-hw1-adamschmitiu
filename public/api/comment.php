@@ -15,8 +15,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 // 1. Go to the database and get all work associated with the $taskId
 // $comments = Comment::fetchAll()
-$commentArr = Comment::fetchAll();
-
+//$commentArr = Comment::fetchAll();
+$commentArr = Comment::getWorkByTaskId($taskId);
 // 2. Convert to JSON
 $json = json_encode($commentArr, JSON_PRETTY_PRINT);
 
