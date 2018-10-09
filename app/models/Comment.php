@@ -19,7 +19,7 @@ public function create() {
     $this->comment
 
   ]);
-  $this->$id = $db->lastInsertId();
+  $this->id = $db->lastInsertId();
 }
 
 public static function getWorkByTaskId() {
