@@ -7,17 +7,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   exit;
 }
 
-$taskId = intval($_GET['taskId']);
+//$taskId = intval($_GET['taskId']);
 
-if ($taskId < 1) {
-  throw new Exception('Invalid Task ID');
-}
+//if ($taskId < 1) {
+  //throw new Exception('Invalid Task ID');
+//}
 
 
 // 1. Go to the database and get all work associated with the $taskId
 // $comments = Comment::fetchAll()
 //$commentArr = Comment::fetchAll();
-$commentArr = Comment::getWorkByTaskId($taskId);
+$commentArr = Comment::getWorkByTaskId();
 // 2. Convert to JSON
 $json = json_encode($commentArr, JSON_PRETTY_PRINT);
 
