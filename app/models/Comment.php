@@ -5,9 +5,9 @@ class Comment
   public $id;
   public $comment;
 
-  public function __construct($row) {
-    $this->id = isset($row['id']) ? intval($row['id']):null;
-    $this->comment = intval($row['comment']);
+  public function __construct($data) {
+    $this->id = isset($data['id']) ? intval($data['id']):null;
+    $this->comment = $data['comment'];
 }
 
 public function create() {
@@ -17,7 +17,6 @@ public function create() {
   $statement = $db->prepare($sql);
   $success = $statement->execute([
     $this->comment
-
   ]);
   $this->id = $db->lastInsertId();
 }
