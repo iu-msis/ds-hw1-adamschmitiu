@@ -41,7 +41,7 @@ public function create() {
     VALUES (?)';
   $statement = $db->prepare($sql);
   $success = $statement->execute([
-    $this->comment_db
+    $this->comment
 
   ]);
   $this->$id = $db->lastInsertId();
