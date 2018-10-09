@@ -11,12 +11,23 @@ class Comment
     $this->comment = intval($row['comment']);
 }
 
+public function create() {
+  $db = new PDO(DB_SERVER, DB_USER, DB_PW);
+  $sql = 'INSERT Comments (comment)
+    VALUES (?)';
+  $statement = $db->prepare($sql);
+  $success = $statement->execute([
+    $this->comment
+
+  ]);
+  $this->$id = $db->lastInsertId();
+}
     public static function fetchAll() {
       // 1. Connect to the database
       $db = new PDO(DB_SERVER, DB_USER, DB_PW);
 
       // 2. Prepare the query
-      $sql = 'SELECT * FROM Comment';
+      $sql = 'SELECT * FROM Comments';
 
       $statement = $db->prepare($sql);
 
@@ -35,16 +46,6 @@ class Comment
 
     return $arr;
   }
-public function create() {
-  $db = new PDO(DB_SERVER, DB_USER, DB_PW);
-  $sql = 'INSERT Comments (comment)
-    VALUES (?)';
-  $statement = $db->prepare($sql);
-  $success = $statement->execute([
-    $this->comment
 
-  ]);
-  $this->$id = $db->lastInsertId();
-}
 
 }
