@@ -7,11 +7,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   exit;
 }
 
-//$taskId = intval($_GET['taskId'] ?? 0);
+$taskId = intval($_GET['taskId'] ?? 0);
 
-//if ($taskId < 1) {
-  //throw new Exception('Invalid Task ID');
-//}
+if ($taskId < 1) {
+  throw new Exception('Invalid Task ID');
+}
+
 
 // 1. Go to the database and get all work associated with the $taskId
 // $comments = Comment::fetchAll()
