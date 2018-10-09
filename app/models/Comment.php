@@ -9,7 +9,7 @@ class Comment
     $this->id = isset($row['id']);
 
     $this->comment = intval($row['comment']);
-
+}
 
     public static function fetchAll() {
       // 1. Connect to the database
