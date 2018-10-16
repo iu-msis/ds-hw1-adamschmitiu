@@ -86,3 +86,7 @@ p {
   	visibility: visible;
   	opacity: 1;
   }
+
+  #commentTable {
+    color: red;
+  }
