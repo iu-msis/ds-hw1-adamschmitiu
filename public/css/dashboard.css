@@ -87,6 +87,6 @@ p {
   	opacity: 1;
   }
 
-  #commentTable {
-    color: red;
+  #commentTable th, td{
+    border-bottom: red;
   }
