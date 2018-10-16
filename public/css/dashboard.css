@@ -90,3 +90,7 @@ p {
   #commentTable th, td{
     border-bottom: red;
   }
+
+  #commentTable {
+    color: blue;
+  }
