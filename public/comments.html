@@ -34,7 +34,7 @@
     </ul>
   </div>
 </nav>
-    <main id="comApp" class="container-fluid">
+    <main id="commentApp" class="container-fluid">
       <table id="commentTable" class="table table-hover table-dark">
         <thead>
           <tr>
@@ -43,9 +43,9 @@
           </tr>
         </thead>
         <tbody id="commentTableBody">
-          <tr v-for="com in comList">
-            <td>{{com.id}}</td>
-            <td>{{com.comment}}</td>
+          <tr v-for="comment in comList">
+            <td>{{comment.id}}</td>
+            <td>{{comment.comment}}</td>
           </tr>
         </tbody>
       </table>
