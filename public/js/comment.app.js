@@ -5,7 +5,7 @@ var commentApp = new Vue({
       comment:''
     },
 
-    comList:[]
+    commentList:[]
   },
    methods: {
      handleCommentForm(e) {
@@ -20,7 +20,7 @@ var commentApp = new Vue({
          body: s
        })
        .then(response => response.json())
-       .then(json => {this.comList.push(json)})
+       .then(json => {this.commentList.push(json)})
        .catch(err => {
          console.error('COMMENT POST ERROR');
          console.error(err);
@@ -37,7 +37,7 @@ var commentApp = new Vue({
      this.commentForm = this.getEmptyCommentForm();
      fetch('api/comment.php')
      .then(response => response.json())
-     .then(json => {commentApp.comList = json})
+     .then(json => {commentApp.commentList = json})
      .catch(err => {
        console.log('COMMENT LIST ERROR:');
        console.log(err);
